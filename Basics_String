@@ -1,0 +1,13 @@
+package Strings.src;
+
+public class Basics_String{
+    public static void main(String[]args){
+        String name="Dayal hari";
+        String sirname="Thakur";
+        System.out.println(name+" "+sirname);
+        System.out.println(name.charAt(0));
+        System.out.println(name==sirname);
+        System.out.println(new int[]{1,2,3,4,5});
+
+    }
+}
