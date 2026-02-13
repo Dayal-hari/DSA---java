@@ -1,0 +1,40 @@
+package ARRAY;
+
+public class a{
+    int top=-1;
+    int size=5;
+    int[]stack=new int[size];
+    void push(int x){
+        if(top==size-1){
+            System.out.println("Stack overflow");
+        }else{
+            stack[++top]=x;
+            System.out.println("pushed"+x);
+        }
+    }
+    void pop(){
+        if(top==-1){
+            System.out.println("stack underflow");
+        }else{
+            System.out.println(stack[top--]+"popped");
+        }
+    }
+    public static void main(String[]args){
+        a stack=new a();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+        stack.pop();
+
+    }
+}
+
+
