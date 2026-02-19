@@ -1,0 +1,33 @@
+class Solution {
+    public int thirdMax(int[] nums) {
+        Integer fmax=null;
+        Integer smax=null;
+        Integer tmax=null;
+        for(int i=0;i<nums.length;i++){
+            int x=nums[i];
+            if ((fmax != null && x == fmax) ||
+                (smax != null && x == smax) ||
+                (tmax != null && x == tmax))
+                continue;
+                
+            if(fmax==null || x>fmax ){
+                tmax=smax;
+                smax=fmax;
+                fmax=x;
+            }    
+            else if(smax==null || x>smax){
+                tmax=smax;
+                smax=x;
+            
+            }else if(tmax==null || x>tmax){
+                tmax=x;
+
+            }
+            
+            
+        }
+        if(tmax==null)return fmax;
+        return tmax;
+        
+    }
+}
